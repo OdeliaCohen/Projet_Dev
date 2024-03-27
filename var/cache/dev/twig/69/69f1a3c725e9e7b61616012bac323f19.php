@@ -116,7 +116,10 @@ class __TwigTemplate_314ccdc0c3a227cb12d692ee787ff40b extends Template
         // line 57
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 57, $this->source); })()), 'form_start');
         echo "
-
+        ";
+        // line 58
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 58, $this->source); })()), 'errors');
+        echo "
         ";
         // line 59
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 59, $this->source); })()), "profileType", [], "any", false, false, false, 59), 'row', ["attr" => ["class" => "form-control"]]);
@@ -177,7 +180,7 @@ class __TwigTemplate_314ccdc0c3a227cb12d692ee787ff40b extends Template
      */
     public function getDebugInfo()
     {
-        return array (  135 => 70,  128 => 65,  126 => 60,  122 => 59,  117 => 57,  98 => 41,  90 => 35,  82 => 32,  79 => 31,  77 => 30,  70 => 26,  43 => 1,);
+        return array (  138 => 70,  131 => 65,  129 => 60,  125 => 59,  121 => 58,  117 => 57,  98 => 41,  90 => 35,  82 => 32,  79 => 31,  77 => 30,  70 => 26,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -239,7 +242,7 @@ class __TwigTemplate_314ccdc0c3a227cb12d692ee787ff40b extends Template
         </div>
 
         {{ form_start(form) }}
-
+        {{ form_errors(form) }}
         {{ form_row(form.profileType, {'attr': {'class': 'form-control'}}) }}
         {{ form_row(form.profileBudget, {
             'attr': {
